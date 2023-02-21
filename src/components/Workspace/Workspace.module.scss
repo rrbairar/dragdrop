@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.sidebar,
+.workspace{
+  border: 1px solid $secondary-color;
+  background: $primary-color;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  p{
+    border: 1px solid $secondary-color;
+    padding: 10px;
+    width: 100px;
+    cursor: move;
+  }
+}
+.workspace{
+  width: 60%;
+  max-height: 500px;
+  overflow: auto;
+  .container{
+    padding: 10px;
+  }
+  .image_container{
+    position: relative;
+    height: 70px;
+    ::file-selector-button {
+      display: none;
+    }
+    ::-webkit-file-upload-button {
+      display: none;
+   }
+   input{
+    display: none;
+   }
+   label{
+    display: block;
+    height: 70px;
+    width: 70px;
+    overflow: auto;
+    img{
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+   }
+  }
+}
